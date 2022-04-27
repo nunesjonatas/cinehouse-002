@@ -11,3 +11,23 @@ function listarTodosOsFilmes(filmes) {
   }
 }
 listarTodosOsFilmes(catalogoObj.data);
+
+function  listarFilmesEmCartaz(filmes){
+  const filmesEmCartaz = filmes.filter((filme)=> {
+    if (filme.emCartaz == true) {
+      return true;
+    }
+  });
+  return filmesEmCartaz;
+}
+
+
+// const listarFilmesEmCartaz = (filmes) =>
+//   filmes.filter((filme) => filme.emCartaz);
+
+function listarFilmesEmCartaz(filmes) {
+  return filmes.filter((filme) => filme.emCartaz);
+}
+console.log(listarFilmesEmCartaz(catalogoObj.data));
+
+
